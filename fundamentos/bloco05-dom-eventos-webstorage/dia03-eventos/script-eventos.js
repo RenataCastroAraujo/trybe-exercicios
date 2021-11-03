@@ -29,7 +29,7 @@ function diasDoMes() {
             criaClasse.className = 'day holiday';
             criaClasse.innerHTML = listaDias[i];
             containerDias.appendChild(criaClasse);
-        } else if (listaDias[i] === 4 | listaDias[i] === 11 | listaDias === 18) {
+        } else if (listaDias[i] === 4 | listaDias[i] === 11 | listaDias[i] === 18) {
             criaClasse.className = 'day friday';
             criaClasse.innerHTML = listaDias[i];
             containerDias.appendChild(criaClasse);
@@ -57,20 +57,20 @@ btnFeriados('Feriados');
 function displayHolidays() {
     const btnFeriado = document.querySelector('#btn-holiday');
     const feriados = document.querySelectorAll('.holiday')
-  
+
     function mudaFeriado() {
         for (let index = 0; index < feriados.length; index += 1) {
-          if (feriados[index].style.backgroundColor === 'white') {
-            feriados[index].style.backgroundColor = 'rgb(238, 238, 238)';
-          } else {
-            feriados[index].style.backgroundColor = 'white';
-          }
+            if (feriados[index].style.backgroundColor === 'white') {
+                feriados[index].style.backgroundColor = 'rgb(238, 238, 238)';
+            } else {
+                feriados[index].style.backgroundColor = 'white';
+            }
         }
-      }
+    }
     btnFeriado.addEventListener('click', mudaFeriado);
-  };
-  
-  displayHolidays();
+};
+
+displayHolidays();
 //EXERCICIO 04 -------------------------------------------------------------------------------------------------------//
 function btnSextaFeira(botão) {
     const criaBotao = document.createElement('button');
@@ -80,3 +80,45 @@ function btnSextaFeira(botão) {
 };
 btnSextaFeira('Sexta-Feira');
 //EXERCICIO 05 --------------------------------------------------------------------------------------------------------//
+const sextas = document.getElementsByClassName('friday');
+const btnSexta = document.querySelector('#btn-friday');
+const sextasDezembro = [4, 11, 18, 25];
+
+function sextaChegou() {
+    for (let i = 0; i < sextas.length; i += 1) {
+        if (sextas[i].innerHTML === 'Sexta chegou') {
+            sextas[i].innerHTML = sextasDezembro[i];
+        } else {
+            sextas[i].innerHTML = 'Sexta chegou';
+        };
+    }
+}
+btnSexta.addEventListener('click', sextaChegou);
+// EXERCICIO 06 -----------------------------------------------------------------------------------------------------//
+function zoomDia(event) {
+    event.target.style.fontSize = '40px';
+};
+containerDias.addEventListener('mouseover', zoomDia);
+
+function minDia(event) {
+    event.target.style.fontSize = '20px';
+}
+containerDias.addEventListener('mouseout', minDia);
+// EXERCICIO 07 ------------------------------------------------------------------------------------------------------//
+const divTarefas = document.querySelector('.my-tasks');
+function novaTarefa(tarefa) {
+    const criaTarefa = document.createElement('span');
+    criaTarefa.innerHTML = tarefa;
+    divTarefas.appendChild(criaTarefa);
+}
+novaTarefa('TRYBE');
+// EXERCICIO 08 -----------------------------------------------------------------------------------------------------//
+function legendaCor(cor){
+    const novaCor = document.createElement('div');
+    novaCor.className = 'task';
+    novaCor.style.backgroundColor = cor;
+    divTarefas.appendChild(novaCor);
+}
+legendaCor('blue');
+// EXERCICIO 09 --------------------------------------------------------------------------------------------------------//
+

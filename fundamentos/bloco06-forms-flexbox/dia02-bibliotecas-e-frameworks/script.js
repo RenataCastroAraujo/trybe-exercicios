@@ -12,4 +12,11 @@ function criaOption () {
 criaOption();
 //gabarito consultado
 
+const btnEnviar = document.getElementById('enviar')
+function enviar (event){
+    event.preventDefault();
+}
+btnEnviar.addEventListener('click', enviar);
+
 document.getElementById('data').DatePickerX.init();
+

@@ -14,7 +14,7 @@
 
 <body>
     <h1>Curriculo</h1>
-    <form class="row g-3 needs-validation">
+    <form class="row g-3 needs-validation js-form" method="get">
         <fieldset>
             <div>
                 <label for="name">Nome Completo:</label>
@@ -25,22 +25,22 @@
             <div>
                 <label for="e-mail">E-mail:</label>
                 <br>
-                <input type="email" maxlength="50" placeholder="Digite seu e-mail" id="e-mail" required>
+                <input type="email" maxlength="50" placeholder="Digite seu e-mail" id="e-mail" date-validate-field="e-mail" required>
             </div>
             <div>
                 <label for="cpf">CPF:</label>
                 <br>
-                <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" required>
+                <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Apenas números" date-validate-field="cpf" required>
             </div>
             <div>
                 <label for="endereco">Endereço:</label>
                 <br>
-                <input type="text" name="endereco" id="endereco" maxlength="200" placeholder="Seu endereço" required>
+                <input type="text" name="endereco" id="endereco" maxlength="200" date-validate-field="endereco" placeholder="Seu endereço" required>
             </div>
             <div>
                 <label for="cidade">Cidade:</label>
                 <br>
-                <input type="text" name="cidade" id="cidade" maxlength="28" required>
+                <input type="text" name="cidade" id="cidade" maxlength="28" date-validate-field="cidade" required>
             </div>
             <div>
                 <label for="estado">Estado:</label>
@@ -85,6 +85,7 @@
         <button type="submit" id="enviar">Enviar</button>
         <button type="reset" id="limpar">Limpar tudo</button>
     </div>
+    <script src ="dist/js/just-validate.js"></script>
     <script src="dist/js/DatePickerX.js"></script>
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"

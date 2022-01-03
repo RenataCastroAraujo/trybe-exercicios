@@ -12,11 +12,16 @@
     padding: 20px;
 }
 
+section {
+    display: flex;
+}
+
 .emergency-tasks {
-    display: inline-block;
     height: 400px;
     margin: 56px 0;
     width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .emergency-tasks div {
@@ -27,6 +32,14 @@
     color: black;
     margin-top: 10px;
     padding: 10px;
+}
+
+.no-emergency-tasks {
+    height: 400px;
+    margin: 56px 0;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .no-emergency-tasks div {
@@ -45,3 +58,5 @@
     padding: 15px;
     text-align: center;
 }
+
+

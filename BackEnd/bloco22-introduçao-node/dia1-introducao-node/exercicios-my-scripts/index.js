@@ -1,7 +1,5 @@
 const readline = require('readline-sync');
 
-// Criamos uma lista dos scripts disponíveis
-// Utilizamos objetos com `name` e `path` para facilitar a criação da lista que será exibida
 const scripts = [
   { name: 'Calcular IMC', path: './imc.js' },
   { name: 'Calcular velocidade média', path: './velocidade.js' },
